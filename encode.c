@@ -29,8 +29,7 @@ for(int i = 0;i < (x?y+1:y);i++)
     for(int n=0;n<((i == (x?y+1:y)-1)&&x?x:3);n++)
     {
         temps[n] = code[i*3+n];
-    }
-    /*中文字节最高位是1看起来是负数,弄起来很麻烦暂时跳过*/
+    }/*中文字节最高位是1看起来是负数,弄起来很麻烦暂时跳过*/
     if (temps[0]<0&&temps[1]<0)
     {
     printf("Double byte character cannot be parsed!\n");
