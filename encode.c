@@ -29,7 +29,7 @@ for(int i = 0;i < (x?y+1:y);i++)
     for(int n=0;n<((i == (x?y+1:y)-1)&&x?x:3);n++)
     {
         temps[n] = code[i*3+n];
-    }/*中文字节最高位是1看起来是负数,弄起来很麻烦暂时跳过*/
+    }
     temp_new[0] = basecode[(int)  (int)temps[0] >> 2];
     temp_new[1] = basecode[(int)  ( ((int)temps[0] & 0b00000011) << 4 ) | ( ((int)temps[1] & 11110000)>>4 ) ];
     temp_new[2] = basecode[(int)  ( ( ( (int)temps[1] & 0b00001111)<<2) | ( (((int)temps[2] & 11000000)>>6)))];
